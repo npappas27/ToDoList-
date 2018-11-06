@@ -23,7 +23,6 @@ class ToDoListViewController: UITableViewController {
         return itemArray.count
     }
     
-    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "ToDoItemCell", for: indexPath)
@@ -44,9 +43,7 @@ class ToDoListViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
      
         itemArray[indexPath.row].done = !itemArray[indexPath.row].done
-        
         saveItems()
-        
         tableView.deselectRow(at: indexPath, animated: true)
     }
     
